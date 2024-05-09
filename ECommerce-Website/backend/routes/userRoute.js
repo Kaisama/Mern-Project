@@ -11,7 +11,7 @@ router.post('/register', createUser);
 router.get('/', authenticate, authorizeAdmin, getAllUsers);
 
 // Route for user login
-router.post('/login', loginUser);
+router.post('/auth', loginUser);
 
 // Route for user logout
 router.post("/logout", logoutCurrentUser);

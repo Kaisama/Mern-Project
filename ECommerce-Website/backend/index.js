@@ -9,7 +9,7 @@ import connectDB from './config/db.js'
 import userRoute from './routes/userRoute.js'
 
 dotenv.config()
-const port=process.env.PORT||3000
+const port=process.env.PORT
 
 connectDB();
 
