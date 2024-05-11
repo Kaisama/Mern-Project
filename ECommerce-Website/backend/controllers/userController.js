@@ -13,6 +13,7 @@ const createUser = asyncHandler(async (req, res) => {
     }
 
     const userExists = await User.findOne({ email });
+    
     if (userExists) {
         res.status(400).json({ error: "User already exists" });
         return;
@@ -37,6 +38,8 @@ const createUser = asyncHandler(async (req, res) => {
     }
 });
 
+
+
 // Controller function for user login
 const loginUser = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
@@ -60,6 +63,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     res.status(401).json({ error: "Invalid email or password" });
 });
+
 
 // Controller function for user logout
 const logoutCurrentUser = asyncHandler(async (req, res) => {
