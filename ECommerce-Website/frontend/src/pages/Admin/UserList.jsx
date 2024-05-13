@@ -6,8 +6,9 @@ import {
   useDeleteUserMutation,
   useGetUsersQuery,
   useUpdateUserMutation,
-} from "../../redux/api/userApiSlice";
+} from "../../redux/api/usersApiSlice";
 import { toast } from "react-toastify";
+import AdminMenu from "./AdminMenu";
 
 
 const UserList = () => {
@@ -58,7 +59,7 @@ const UserList = () => {
 
   return (
     <div className="p-4">
-      <h1 className="mb-4 text-2xl font-semibold">Users</h1>
+      
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -67,7 +68,7 @@ const UserList = () => {
         </Message>
       ) : (
         <div className="flex flex-col md:flex-row">
-          {/* <AdminMenu /> */}
+          <AdminMenu />
           <table className="w-full mx-auto md:w-4/5">
             <thead>
               <tr>

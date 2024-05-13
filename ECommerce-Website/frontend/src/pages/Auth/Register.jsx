@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useRegisterMutation } from '../../redux/api/userApiSlice';
+import { useRegisterMutation } from '../../redux/api/usersApiSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router';
 import Loader from '../../components/Loader';

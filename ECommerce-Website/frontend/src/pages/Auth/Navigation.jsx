@@ -4,8 +4,9 @@ import { FaHeart } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navigation.css'; 
 import { useDispatch, useSelector } from 'react-redux';
-import { useLoginMutation, useLogoutMutation } from '../../redux/api/userApiSlice'; // Corrected import statement
+import { useLoginMutation, useLogoutMutation } from '../../redux/api/usersApiSlice'; // Corrected import statement
 import { logout } from '../../redux/features/Auth/authSlice';
+import FavoritesCount from '../Products/FavoritesCount';
 
 const Navigation = () => {
   const { userInfo } = useSelector(state => state.auth);
@@ -59,6 +60,7 @@ const Navigation = () => {
         <Link to='/favorite' className='flex items-center transition-transform transform hover:translate-x-2'>
           <FaHeart className='mr-2 mt-[3rem]' size={26} />
           <span className="hidden nav-item-name mt-[3rem]">WISHLIST</span>{" "}
+          <FavoritesCount/>
         </Link>
       </div>
 

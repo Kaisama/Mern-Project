@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router'
-import { useLoginMutation } from '../../redux/api/userApiSlice'
+import { useLoginMutation } from '../../redux/api/usersApiSlice'
 import './Navigation.css'
 import Loader from '../../components/Loader'
 import { Link } from 'react-router-dom'

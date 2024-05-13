@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useProfileMutation } from '../../redux/api/userApiSlice'
+import { useProfileMutation } from '../../redux/api/usersApiSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { BraintreePayPalButtons } from '@paypal/react-paypal-js'
 import { Link } from 'react-router-dom'
